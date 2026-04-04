@@ -38,7 +38,7 @@ AddCatkinProject(
 if(ROS_DISTRO STREQUAL "humble")
   AddCatkinProject(
     ros2_robotiq_gripper
-    GITHUB aalmrad/ros2_robotiq_gripper
+    GITHUB PickNikRobotics/ros2_robotiq_gripper
     GIT_TAG 12e623212e6891a5fcc9af94d67b07e640916394
     # GIT_TAG origin/main
     DEPENDS serial

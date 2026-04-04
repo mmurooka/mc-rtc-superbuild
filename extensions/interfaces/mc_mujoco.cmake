@@ -9,13 +9,17 @@ AddProject(mc_mujoco
   DEPENDS mc_rtc
 )
 
+set(MC_RTC_WS_PREFIX_FILE "${PROJECT_BINARY_DIR}/catkin-stamps/cmake-prefix.cmake")
+if(EXISTS "${MC_RTC_WS_PREFIX_FILE}")
+  string(REPLACE " " "\\ " MUJOCO_ROOT_DIR_ESCAPED "${MUJOCO_ROOT_DIR}")
+  file(APPEND "${MC_RTC_WS_PREFIX_FILE}" " MUJOCO_ROOT_DIR=${MUJOCO_ROOT_DIR_ESCAPED}")
+endif()
 AddCatkinProject(
   MujocoRosUtils
   GITHUB isri-aist/MujocoRosUtils.git
   GIT_TAG origin/mujoco-3.0.0
   WORKSPACE mc_rtc_ws
   DEPENDS mc_mujoco
-  CMAKE_ARGS "-DMUJOCO_ROOT_DIR=${CMAKE_INSTALL_PREFIX}/share/mujoco/mujoco-3.0.0"
 )
 
 if(WITH_HRP5)
