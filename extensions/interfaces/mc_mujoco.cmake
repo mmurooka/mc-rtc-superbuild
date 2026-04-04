@@ -9,6 +9,15 @@ AddProject(mc_mujoco
   DEPENDS mc_rtc
 )
 
+AddCatkinProject(
+  MujocoRosUtils
+  GITHUB isri-aist/MujocoRosUtils.git
+  GIT_TAG origin/mujoco-3.0.0
+  WORKSPACE mc_rtc_ws
+  DEPENDS mc_mujoco
+  CMAKE_ARGS "-DMUJOCO_ROOT_DIR=${CMAKE_INSTALL_PREFIX}/share/mujoco/mujoco-3.0.0"
+)
+
 if(WITH_HRP5)
   AddProject(hrp5p_mj_description
     GITHUB_PRIVATE isri-aist/hrp5p_mj_description
@@ -44,8 +53,8 @@ endif()
 
 if(WITH_Kinova)
   AddProject(kinova_mj_description
-    GITHUB_PRIVATE mathieu-celerier/kinova_mj_description
-    GIT_TAG origin/main-external-forces
+    GITHUB_PRIVATE mmurooka/kinova_mj_description
+    GIT_TAG origin/rmb-compliance
     DEPENDS mc_mujoco mc_kinova
   )
 endif()
