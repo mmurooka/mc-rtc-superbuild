@@ -39,7 +39,8 @@ if(ROS_DISTRO STREQUAL "humble")
   AddCatkinProject(
     ros2_robotiq_gripper
     GITHUB aalmrad/ros2_robotiq_gripper
-    GIT_TAG origin/main
+    GIT_TAG 12e623212e6891a5fcc9af94d67b07e640916394
+    # GIT_TAG origin/main
     DEPENDS serial
     WORKSPACE data_ws INSTALL_DEPENDENCIES
   )
@@ -57,7 +58,8 @@ list(APPEND MC_KINOVA_DEPENDS ros2_robotiq_gripper)
 AddCatkinProject(
   ros_kortex
   GITHUB Kinovarobotics/ros2_kortex
-  GIT_TAG origin/${ROS_DISTRO}
+  GIT_TAG origin/jazzy
+  # GIT_TAG origin/${ROS_DISTRO}
   WORKSPACE data_ws INSTALL_DEPENDENCIES
 )
 
