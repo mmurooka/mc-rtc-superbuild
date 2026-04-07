@@ -13,7 +13,7 @@ set(MC_KINOVA_DEPENDS mc_rtc ros_kortex)
 if(WITH_Kinova_Bota)
   AddCatkinProject(
     bota_driver
-    GITLAB_PRIVATE botasys/drivers/bota_driver_ros2
+    GITLAB botasys/drivers/bota_driver_ros2
     GIT_TAG origin/main
     WORKSPACE data_ws INSTALL_DEPENDENCIES
   )
