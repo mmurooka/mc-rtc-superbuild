@@ -72,7 +72,7 @@ AddProject(
 
 AddProject(
   mc_kortex
-  GITHUB mathieu-celerier/mc_kortex
-  GIT_TAG origin/main
+  GITHUB mmurooka/mc_kortex
+  GIT_TAG origin/fix-robotiq-range
   DEPENDS mc_rtc ros_kortex
 )
