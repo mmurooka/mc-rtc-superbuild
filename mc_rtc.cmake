@@ -226,7 +226,7 @@ AddProject(
   GITHUB mmurooka/mc_rtc
   GIT_TAG origin/wholebody-contact
   CMAKE_ARGS -DMC_LOG_UI_PYTHON_EXECUTABLE=${MC_LOG_UI_PYTHON_EXECUTABLE}
-             ${MC_RTC_ROS_OPTION} ${MC_RTC_EXTRA_OPTIONS}
+             ${MC_RTC_ROS_OPTION} ${MC_RTC_EXTRA_OPTIONS} -DCMAKE_POLICY_VERSION_MINIMUM=3.5
   DEPENDS ${mc_rtc_DEPENDS}
   APT_PACKAGES libmc-rtc-dev mc-rtc-utils python-mc-rtc python3-mc-rtc
                ros-${ROS_DISTRO}-mc-rtc-plugin
