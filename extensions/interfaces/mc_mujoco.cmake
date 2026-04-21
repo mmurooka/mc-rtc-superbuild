@@ -41,6 +41,14 @@ if(WITH_RHPS1)
   )
 endif()
 
+if(WITH_RHP7)
+  AddProject(rhp7_mj_description
+    GITHUB_PRIVATE Yoshida-Lab-TUS/rhp7_mj_description
+    GIT_TAG origin/motion-reach
+    DEPENDS mc_mujoco rhp7_description
+  )
+endif()
+
 if(WITH_HUMAN)
   AddProject(human_mj_description
     GITHUB Hugo-L3174/human_mj_description
