@@ -17,4 +17,5 @@ AddProject(
   GITHUB_PRIVATE Yoshida-Lab-TUS/mc_rhp7
   GIT_TAG origin/motion-reach
   DEPENDS rhp7_description mc_rtc
+  CMAKE_ARGS -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 )
