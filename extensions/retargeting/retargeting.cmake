@@ -6,11 +6,11 @@ AddProject(
   CMAKE_ARGS -DENABLE_MUJOCO=ON
 )
 
-AddCatkinProject(
-  RHP7MultiContactMotion
-  GITHUB_PRIVATE isri-aist/RHP7MultiContactMotion
-  GIT_TAG origin/motion-reach
-  WORKSPACE mc_rtc_ws
-  DEPENDS mc_rtc
-  CMAKE_ARGS -DENABLE_MUJOCO=ON
-)
+# AddCatkinProject(
+#   RHP7MultiContactMotion
+#   GITHUB_PRIVATE isri-aist/RHP7MultiContactMotion
+#   GIT_TAG origin/motion-reach
+#   WORKSPACE mc_rtc_ws
+#   DEPENDS mc_rtc
+#   CMAKE_ARGS -DENABLE_MUJOCO=ON
+# )
