@@ -26,7 +26,7 @@ AddCatkinProject(
 AddCatkinProject(
   MujocoTactileSensorPlugin
   GITHUB isri-aist/MujocoTactileSensorPlugin.git
-  GIT_TAG origin/mujoco-3.0.0
+  GIT_TAG origin/mujoco-3.0.0-ros2
   WORKSPACE mc_rtc_ws
   DEPENDS mc_mujoco
 )
