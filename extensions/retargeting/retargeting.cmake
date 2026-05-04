@@ -1,10 +1,10 @@
-# AddProject(
-#   McRtcTactileSensorPlugin
-#   GITHUB isri-aist/McRtcTactileSensorPlugin
-#   GIT_TAG origin/master
-#   DEPENDS mc_rtc
-#   CMAKE_ARGS -DENABLE_MUJOCO=ON
-# )
+AddProject(
+  McRtcTactileSensorPlugin
+  GITHUB_PRIVATE isri-aist/McRtcTactileSensorPlugin
+  GIT_TAG origin/master
+  DEPENDS mc_rtc MujocoTactileSensorPlugin
+  CMAKE_ARGS -DENABLE_MUJOCO=ON -DENABLE_ESKIN=OFF
+)
 
 AddCatkinProject(
   RHP7MultiContactMotion
